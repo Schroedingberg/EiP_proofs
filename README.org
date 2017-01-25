@@ -1,5 +1,8 @@
 * Blatt 7 (Bubble sort?)
+#+BEGIN_EXPORT latex
   \(n := \left|a\right|\)
+#+END_EXPORT
+
   SI := Schleifeninvariante
 
   - Innere Schleife ::
