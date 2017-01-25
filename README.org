@@ -1,0 +1,26 @@
+* Blatt 7 (Bubble sort?)
+  \(n := \left|a\right|\)
+  SI := Schleifeninvariante
+
+  - Innere Schleife ::
+    - Partielle Korrektheit :: 
+      - SI_j :: Alle Elemente in a[:j] sind kleiner als a[j]
+      - SI_0 :: a[:0] = [] (Ich nehme einfach an, dass nichts immer kleiner ist als irgendwas, bin nicht sicher ob das ganz korrekt ist)
+      - SI_j sei wahr :: für ein beliebiges festes j (Induktionsannahme)
+      - SI_{j+1} (Induktionsschritt) :: Wenn es kein Element in a[:j+1]
+	   gibt, das größer ist als a[j+1], dann behält das Element a[j+1]
+	   seine Position.  Ansonsten wird es solange mit jeweils
+	   vorherigen Elementen (also mit Elementen mit decrementierendem
+	   Index) vertauscht, bis in a[:j+1] kein größeres Element mehr
+	   ist, als das bei a[j+1].
+    - Terminierung :: Die Schleife wird ausgeführt,
+	 solange j größer als 0 ist. In jeder Iteration wird aber j um 1 verringert. Darum terminiert die Schleife.
+  - Äußere Schleife ::
+    - Partielle Korrektheit :: Die durch die innere Schleife implementierte Abfolge von Vertauschungen wird durch die
+      äußere for-Schleife n-mal durchgeführt, sodass die Liste am Ende
+      sortiert ist.
+    - Terminierung :: Die for Schleife iteriert über die Elemente von a. Wenn a endliche Länge hat, terminiert die Schleife immer.
+       
+
+
+
