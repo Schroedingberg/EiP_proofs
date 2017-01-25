@@ -16,8 +16,9 @@
 	   vorherigen Elementen (also mit Elementen mit decrementierendem
 	   Index) vertauscht, bis in a[:j+1] kein größeres Element mehr
 	   ist, als das bei a[j+1].
-    - Terminierung :: Die Schleife wird ausgeführt,
-	 solange j größer als 0 ist. In jeder Iteration wird aber j um 1 verringert. Darum terminiert die Schleife.
+    - Terminierung :: Die Schleife wird ausgeführt, solange j größer
+         als 0 ist. In jeder Iteration wird aber j um 1
+         verringert. Darum terminiert die Schleife.
   - Äußere Schleife ::
     - Partielle Korrektheit :: Die durch die innere Schleife implementierte Abfolge von Vertauschungen wird durch die
       äußere for-Schleife n-mal durchgeführt, sodass die Liste am Ende
