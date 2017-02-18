@@ -1,0 +1,27 @@
+#+OPTIONS: toc:nil
+* Sheet 12, Aufgabe 2
+#+BEGIN_SRC python
+def recursive_method(n):
+    if n==0:
+        return 1
+    else:
+        return recursive_method(n-1)+2**n
+#+END_SRC
+
+- Behauptung :: Die Funktion berechnet für jede natürliche Zahl n den Wert \(2^{n+1}-1\)
+- Umschreiben als rekursive Gleichung :: \(R_n = R_{n-1}+2^n, n \geq 1 ,R_0 = 1\)
+- Behauptung :: \(A(n) : R_n = 2^{n+1} -1\)
+- Beweis durch vollständige Induktion nach n
+  - Anfang :: \(A(1)\) wahr.
+	      Beweis: \(2^{1+1} -1 = R_{1-1} + 2^1 \Leftrightarrow 2^{2}-1 = 1+2 \Rightarrow A(1) \text{wahr}\)
+  - Annahme (IA) :: \(A(n)\) wahr für ein festes \(n\in \mathbb{N}\)
+  - Schritt :: Zeige \(A(n+1)\) wahr
+	       Behauptung: \(R_{n+1} = 2^{n+2}-1\)
+	       Beweis: 
+               \begin{eqnarray*}
+	       R_{n+1} & = R_n + 2^{n+1}\\
+	       	       & = 2^{n+1} -1 + 2^{n+1}\\
+		       & = 2\cdot 2^{n+1} -1 \\
+		       & = 2^{n+2} -1
+	       \end{eqnarray*} QED
+
