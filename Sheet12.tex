@@ -1,0 +1,60 @@
+% Created 2017-02-18 Sa 16:25
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[english]{babel}
+\author{Aaron}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Aaron},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.1.1 (Org mode 9.0.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\section{Sheet 12, Aufgabe 2}
+\label{sec:org75b4ba5}
+\begin{verbatim}
+def recursive_method(n):
+    if n==0:
+        return 1
+    else:
+        return recursive_method(n-1)+2**n
+\end{verbatim}
+
+\begin{description}
+\item[{Behauptung}] Die Funktion berechnet für jede natürliche Zahl n den Wert \(2^{n+1}-1\)
+\item[{Umschreiben als rekursive Gleichung}] \(R_n = R_{n-1}+2^n, n \geq 1 ,R_0 = 1\)
+\item[{Behauptung}] \(A(n) : R_n = 2^{n+1} -1\)
+\item Beweis durch vollständige Induktion nach n
+\begin{description}
+\item[{Anfang}] \(A(1)\) wahr.
+Beweis: \(2^{1+1} -1 = R_{1-1} + 2^1 \Leftrightarrow 2^{2}-1 = 1+2 \Rightarrow A(1) \text{wahr}\)
+\item[{Annahme (IA)}] \(A(n)\) wahr für ein festes \(n\in \mathbb{N}\)
+\item[{Schritt}] Zeige \(A(n+1)\) wahr
+Behauptung: \(R_{n+1} = 2^{n+2}-1\)
+Beweis: 
+\begin{eqnarray*}
+R_{n+1} & = R_n + 2^{n+1}\\
+	& = 2^{n+1} -1 + 2^{n+1}\\
+	& = 2\cdot 2^{n+1} -1 \\
+	& = 2^{n+2} -1
+\end{eqnarray*} QED
+\end{description}
+\end{description}
+\end{document}

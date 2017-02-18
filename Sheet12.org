@@ -18,10 +18,11 @@ def recursive_method(n):
   - Schritt :: Zeige \(A(n+1)\) wahr
 	       Behauptung: \(R_{n+1} = 2^{n+2}-1\)
 	       Beweis: 
+	       #+BEGIN_EXPORT latex
                \begin{eqnarray*}
 	       R_{n+1} & = R_n + 2^{n+1}\\
 	       	       & = 2^{n+1} -1 + 2^{n+1}\\
 		       & = 2\cdot 2^{n+1} -1 \\
 		       & = 2^{n+2} -1
 	       \end{eqnarray*} QED
-
+	       #+END_EXPORT
